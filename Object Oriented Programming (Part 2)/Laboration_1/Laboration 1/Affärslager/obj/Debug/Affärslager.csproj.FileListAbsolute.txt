@@ -1,0 +1,11 @@
+C:\Users\erikr\OneDrive\Skrivbord\Root\Programming\C#\OOSU 2\Laboration 1\Laboration 1 v2.2\Laboration 1\Affärslager\obj\Debug\Affärslager.csprojAssemblyReference.cache
+C:\Users\erikr\OneDrive\Skrivbord\Root\Programming\C#\OOSU 2\Laboration 1\Laboration 1 v2.2\Laboration 1\Affärslager\bin\Debug\Affärslager.dll
+C:\Users\erikr\OneDrive\Skrivbord\Root\Programming\C#\OOSU 2\Laboration 1\Laboration 1 v2.2\Laboration 1\Affärslager\bin\Debug\Affärslager.pdb
+C:\Users\erikr\OneDrive\Skrivbord\Root\Programming\C#\OOSU 2\Laboration 1\Laboration 1 v2.2\Laboration 1\Affärslager\obj\Debug\Affärslager.dll
+C:\Users\erikr\OneDrive\Skrivbord\Root\Programming\C#\OOSU 2\Laboration 1\Laboration 1 v2.2\Laboration 1\Affärslager\obj\Debug\Affärslager.pdb
+C:\Users\EzzTheRose\Documents\Utbildning\Asyst 2018\2.3 Objektorientering 2\Laborationer\Lab 1\_GODKÄND LAB\OOSU2 Laboration 1 Inlämning 2 Grupp22\Laboration 1\Affärslager\bin\Debug\Affärslager.dll
+C:\Users\EzzTheRose\Documents\Utbildning\Asyst 2018\2.3 Objektorientering 2\Laborationer\Lab 1\_GODKÄND LAB\OOSU2 Laboration 1 Inlämning 2 Grupp22\Laboration 1\Affärslager\bin\Debug\Affärslager.pdb
+C:\Users\EzzTheRose\Documents\Utbildning\Asyst 2018\2.3 Objektorientering 2\Laborationer\Lab 1\_GODKÄND LAB\OOSU2 Laboration 1 Inlämning 2 Grupp22\Laboration 1\Affärslager\obj\Debug\Affärslager.csprojAssemblyReference.cache
+C:\Users\EzzTheRose\Documents\Utbildning\Asyst 2018\2.3 Objektorientering 2\Laborationer\Lab 1\_GODKÄND LAB\OOSU2 Laboration 1 Inlämning 2 Grupp22\Laboration 1\Affärslager\obj\Debug\Affärslager.csproj.CoreCompileInputs.cache
+C:\Users\EzzTheRose\Documents\Utbildning\Asyst 2018\2.3 Objektorientering 2\Laborationer\Lab 1\_GODKÄND LAB\OOSU2 Laboration 1 Inlämning 2 Grupp22\Laboration 1\Affärslager\obj\Debug\Affärslager.dll
+C:\Users\EzzTheRose\Documents\Utbildning\Asyst 2018\2.3 Objektorientering 2\Laborationer\Lab 1\_GODKÄND LAB\OOSU2 Laboration 1 Inlämning 2 Grupp22\Laboration 1\Affärslager\obj\Debug\Affärslager.pdb

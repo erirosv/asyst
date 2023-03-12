@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{492ED7A8-5F66-46F5-9C7E-C6DDF16C1D2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI_FrameWork</RootNamespace>
+    <AssemblyName>GUI_FrameWork</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\BusinessEntities_FrameWork\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ceTe.DynamicPDF.40, Version=8.0.0.40, Culture=neutral, PublicKeyToken=09b5ce0d5c0a9d8b, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\DynamicPDF.8.0.0.0\lib\net40\ceTe.DynamicPDF.40.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\ClosedXML.0.95.3\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.4.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\EPPlus.5.4.0\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelMapper, Version=5.0.0.0, Culture=neutral, PublicKeyToken=6c3f2bec99465df3, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\ExcelMapper.5.1.216\lib\net461\ExcelMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Runtime.CompilerServices.Unsafe.4.7.1\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Text.Encodings.Web.4.7.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\BusinessEntities_FrameWork\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bestat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestat.Designer.cs">
+      <DependentUpon>Bestat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BokaFöretag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BokaFöretag.Designer.cs">
+      <DependentUpon>BokaFöretag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BokaPrivat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BokaPrivat.Designer.cs">
+      <DependentUpon>BokaPrivat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bokningsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bokningsform.Designer.cs">
+      <DependentUpon>Bokningsform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bokningar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bokningar.Designer.cs">
+      <DependentUpon>Bokningar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButiksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ButiksForm.Designer.cs">
+      <DependentUpon>ButiksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButikSkidskola.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButikSkidskola.Designer.cs">
+      <DependentUpon>ButikSkidskola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButikSkiduthyrning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButikSkiduthyrning.Designer.cs">
+      <DependentUpon>ButikSkiduthyrning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ButikÅterlämning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButikÅterlämning.Designer.cs">
+      <DependentUpon>ButikÅterlämning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayKund.cs" />
+    <Compile Include="frmHyrpris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHyrpris.Designer.cs">
+      <DependentUpon>frmHyrpris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmkonferenspris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmkonferenspris.Designer.cs">
+      <DependentUpon>frmkonferenspris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogipris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogipris.Designer.cs">
+      <DependentUpon>frmLogipris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LäggTillKund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LäggTillKund.Designer.cs">
+      <DependentUpon>LäggTillKund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marknad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marknad.Designer.cs">
+      <DependentUpon>Marknad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marknadmeny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marknadmeny.Designer.cs">
+      <DependentUpon>Marknadmeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Marknadregister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marknadregister.Designer.cs">
+      <DependentUpon>Marknadregister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moduleButikSkidskola.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="moduleButikSkidskola.Designer.cs">
+      <DependentUpon>moduleButikSkidskola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skidlärare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skidlärare.Designer.cs">
+      <DependentUpon>Skidlärare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSysAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysAdmin.Designer.cs">
+      <DependentUpon>frmSysAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="suht2009DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sysadminläggtillpersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sysadminläggtillpersonal.Designer.cs">
+      <DependentUpon>sysadminläggtillpersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysadminmeny.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sysadminmeny.Designer.cs">
+      <DependentUpon>sysadminmeny.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysadminpersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sysadminpersonal.Designer.cs">
+      <DependentUpon>sysadminpersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UppdateraKund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UppdateraKund.Designer.cs">
+      <DependentUpon>UppdateraKund.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bestat.resx">
+      <DependentUpon>Bestat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BokaFöretag.resx">
+      <DependentUpon>BokaFöretag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BokaPrivat.resx">
+      <DependentUpon>BokaPrivat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bokningsform.resx">
+      <DependentUpon>Bokningsform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bokningar.resx">
+      <DependentUpon>Bokningar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButiksForm.resx">
+      <DependentUpon>ButiksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikSkidskola.resx">
+      <DependentUpon>ButikSkidskola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikSkiduthyrning.resx">
+      <DependentUpon>ButikSkiduthyrning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ButikÅterlämning.resx">
+      <DependentUpon>ButikÅterlämning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHyrpris.resx">
+      <DependentUpon>frmHyrpris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmkonferenspris.resx">
+      <DependentUpon>frmkonferenspris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogipris.resx">
+      <DependentUpon>frmLogipris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LäggTillKund.resx">
+      <DependentUpon>LäggTillKund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marknad.resx">
+      <DependentUpon>Marknad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marknadmeny.resx">
+      <DependentUpon>Marknadmeny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marknadregister.resx">
+      <DependentUpon>Marknadregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="moduleButikSkidskola.resx">
+      <DependentUpon>moduleButikSkidskola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Skidlärare.resx">
+      <DependentUpon>Skidlärare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysAdmin.resx">
+      <DependentUpon>frmSysAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysadminläggtillpersonal.resx">
+      <DependentUpon>sysadminläggtillpersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysadminmeny.resx">
+      <DependentUpon>sysadminmeny.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sysadminpersonal.resx">
+      <DependentUpon>sysadminpersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UppdateraKund.resx">
+      <DependentUpon>UppdateraKund.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="suht2009DataSet.xsc">
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="suht2009DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>suht2009DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="suht2009DataSet.xss">
+      <DependentUpon>suht2009DataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities_FrameWork\BusinessEntities_FrameWork\BusinessEntities_FrameWork.csproj">
+      <Project>{e99d0d2a-bcbb-48aa-9f2b-eb62db609777}</Project>
+      <Name>BusinessEntities_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessLayer_FrameWork\BusinessLayer_FrameWork.csproj">
+      <Project>{7B1A2B54-488A-4BEF-9F6F-C9D8282A627A}</Project>
+      <Name>BusinessLayer_FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer_FrameWork\DataLayer_FrameWork.csproj">
+      <Project>{1bb0d322-afa2-43d4-b647-1820370a9a96}</Project>
+      <Name>DataLayer_FrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\BusinessEntities_FrameWork\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

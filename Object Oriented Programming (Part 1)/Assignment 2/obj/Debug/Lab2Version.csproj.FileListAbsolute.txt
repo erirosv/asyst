@@ -1,0 +1,17 @@
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.csprojAssemblyReference.cache
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Properties.Resources.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Registrera.Betygssättning.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Registrera.LäggTillNyKurs.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Registrera.LärareForm.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Main.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Registrera.RegistreraStudentTillKurs.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Registrera.RegistreraLärareTillKurs.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.RegistreraStudent.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.Registrera.RegistreraUppgift.resources
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.csproj.GenerateResource.cache
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.csproj.CoreCompileInputs.cache
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\bin\Debug\Lab2Version.exe.config
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\bin\Debug\Lab2Version.exe
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\bin\Debug\Lab2Version.pdb
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.exe
+C:\Users\Miriam\Desktop\_Lab-2-Ny--master\Lab2Version\obj\Debug\Lab2Version.pdb

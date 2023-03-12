@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Affärslager.controller.Bibliotek">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABgAAAAEAAAgAQAAGAAAAABAAAAAIAAAAAA=</HashCode>
+      <FileName>controller\Bibliotek.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Anställd" />
+      <Property Name="DataStore" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Affärslager.models.Anställd">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAiAACgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Anställd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Affärslager.models.Bok">
+    <Position X="1" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAAEAAABAAAAAAEAAAAAAAAAAACQAAA=</HashCode>
+      <FileName>models\Bok.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bokningar" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Affärslager.models.Faktura">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAIAAAEAAAAAEAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>models\Faktura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bokning" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Affärslager.models.Bokning">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACABAkAEAAAAAAAAAAEAEAAACQAAAhAAAgggoAAgAA=</HashCode>
+      <FileName>models\Bokning.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Faktura" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Böcker" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Affärslager.models.Medlem">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>models\Medlem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Affärslager.Datastore.DataStore">
+    <Position X="4.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAACgAAAABAiAEAAIACAAAAAIAAAAA=</HashCode>
+      <FileName>Datastore\DataStore.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bibliotek" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Anställda" />
+      <Property Name="Böcker" />
+      <Property Name="Bokningar" />
+      <Property Name="Fakturor" />
+      <Property Name="Medlemmar" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

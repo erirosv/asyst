@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47F64081-F451-4E6F-BD9F-1681230F5EE3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lab2Version</RootNamespace>
+    <AssemblyName>Lab2Version</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IKurs.cs" />
+    <Compile Include="ILärare.cs" />
+    <Compile Include="IPerson.cs" />
+    <Compile Include="IStudent.cs" />
+    <Compile Include="IUppgift.cs" />
+    <Compile Include="Kurs.cs" />
+    <Compile Include="Lärare.cs" />
+    <Compile Include="DataStore.cs" />
+    <Compile Include="Registrera\LäggTillNyKurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\LäggTillNyKurs.Designer.cs">
+      <DependentUpon>LäggTillNyKurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrera\LärareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\LärareForm.Designer.cs">
+      <DependentUpon>LärareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrera\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrera\Betygssättning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\Betygssättning.Designer.cs">
+      <DependentUpon>Betygssättning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrera\RegistreraStudentTillKurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\RegistreraStudentTillKurs.Designer.cs">
+      <DependentUpon>RegistreraStudentTillKurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrera\RegistreraLärareTillKurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\RegistreraLärareTillKurs.Designer.cs">
+      <DependentUpon>RegistreraLärareTillKurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrera\RegistreraStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\RegistreraStudent.Designer.cs">
+      <DependentUpon>RegistreraStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registrera\RegistreraUppgift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrera\RegistreraUppgift.Designer.cs">
+      <DependentUpon>RegistreraUppgift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs" />
+    <Compile Include="Uppgift.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Registrera\Betygssättning.resx">
+      <DependentUpon>Betygssättning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\LäggTillNyKurs.resx">
+      <DependentUpon>LäggTillNyKurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\LärareForm.resx">
+      <DependentUpon>LärareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\RegistreraStudentTillKurs.resx">
+      <DependentUpon>RegistreraStudentTillKurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\RegistreraLärareTillKurs.resx">
+      <DependentUpon>RegistreraLärareTillKurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\RegistreraStudent.resx">
+      <DependentUpon>RegistreraStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrera\REgistreraUppgift.resx">
+      <DependentUpon>RegistreraUppgift.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
